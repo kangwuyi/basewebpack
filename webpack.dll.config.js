@@ -14,7 +14,7 @@ module.exports = {
     mode: doMode,
     entry: {
         element_ui: ['./public/css/element.css'],
-        public_style: ['./public/css/common.css']
+        public_style: ['./public/css/reset.css','./public/css/common.css']
     },
     output: {
         path: dllPath,

@@ -92,7 +92,7 @@ const externalConfig = [
         name: 'element-ui',
         scope: 'ELEMENT',
         js: 'https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.2/index.js',
-        css: 'https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.2/theme-chalk/index.css'
+        // css: 'https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.2/theme-chalk/index.css'
     },
 ];
 /**
@@ -376,7 +376,7 @@ var clientConfig = {
          * @param 4 {array} 插入文件
          * @param 5 {array} 插入 cdn
          */
-        new HtmlWebpackPlugin(getHtmlConfig('index.html', 'view/index.ejs', '首页', ['main', 'get'], externalConfig)),
+        new HtmlWebpackPlugin(getHtmlConfig('index.html', 'view/index.ejs', '首页', ['main', 'get', 'main_style'], externalConfig)),
         new HtmlWebpackPlugin(getHtmlConfig('list.html', 'view/list.ejs', '首页', ['main'], externalConfig)),
         new HtmlWebpackPlugin(getHtmlConfig('info.html', 'view/info.ejs', '首页', ['main'], externalConfig)),
         /**
@@ -420,10 +420,10 @@ var clientConfig = {
         ]),
         /**
          * HtmlCriticalWebpackPlugin
-         * @description
+         * @description css 插入文档，减少调用 .css 文件
          * @param penthouse.blockJSRequests {boolean} 调用打包后的JS文件
          */
-        /*new HtmlCriticalWebpackPlugin({
+        new HtmlCriticalWebpackPlugin({
             base: path.resolve(__dirname, 'dist'),
             src: 'index.html',
             dest: 'index.html',
@@ -435,7 +435,7 @@ var clientConfig = {
             penthouse: {
                 blockJSRequests: false
             }
-        })*/
+        }),
         /**
          * ProvidePlugin
          * @description
