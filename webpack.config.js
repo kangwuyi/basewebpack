@@ -376,16 +376,24 @@ var clientConfig = {
          * @param 4 {array} 插入文件
          * @param 5 {array} 插入 cdn
          */
-        new HtmlWebpackPlugin(getHtmlConfig('index.html', 'view/index.ejs', '首页', ['main', 'get', 'main_style'], externalConfig)),
+        new HtmlWebpackPlugin(getHtmlConfig('index.html', 'view/index.ejs', '首页', ['main', 'get'], externalConfig)),
         new HtmlWebpackPlugin(getHtmlConfig('list.html', 'view/list.ejs', '首页', ['main'], externalConfig)),
         new HtmlWebpackPlugin(getHtmlConfig('info.html', 'view/info.ejs', '首页', ['main'], externalConfig)),
         /**
          * DllReferencePlugin
          * @description 加载 dll 组件
+         * @param context manifest文件中请求的上下文
+         * @param manifest 编译时的一个用于加载的JSON的manifest的绝对路径
+         * @param name dll暴露的地方的名称(默认值为manifest.name)
+         * @param scope dll中内容的前缀
          */
         new webpack.DllReferencePlugin({
             context: __dirname,
-            manifest: require('./public/dll/manifest.json')
+            manifest: require('./public/dll/element_ui-manifest.json')
+        }),
+        new webpack.DllReferencePlugin({
+            context: __dirname,
+            manifest: require('./public/dll/public_style-manifest.json')
         }),
         /**
          * AddAssetHtmlPlugin
@@ -393,16 +401,16 @@ var clientConfig = {
          * @param publicPath 浏览器路径
          */
         new AddAssetHtmlPlugin([
-           /* {
-                filepath: path.resolve(__dirname, './public/dll/elementcss.css'),
+            {
+                filepath: path.resolve(__dirname, './public/dll/element_ui.dll.css'),
                 outputPath: 'css',
                 publicPath: path.posix.join('./', 'css'),
                 includeSourcemap: doDev,
                 hash: true,
                 typeOfAsset: 'css'
-            }, */
+            },
             {
-                filepath: path.resolve(__dirname, './public/dll/public_style.css'),
+                filepath: path.resolve(__dirname, './public/dll/public_style.dll.css'),
                 outputPath: 'css',
                 publicPath: path.posix.join('./', 'css'),
                 includeSourcemap: doDev,

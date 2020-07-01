@@ -82,8 +82,13 @@ module.exports = {
             verbose: true
             //cleanOnceBeforeBuildPatterns: ['**/*', '!analogdataImgs', '!analogdataImgs/**/*']
         }),
+        /**
+         * DllPlugin
+         * @description
+         * @param name {string} 要与 output.library 保持一致
+         */
         new webpack.DllPlugin({
-            name: '[name].dll.[ext]',
+            name: '[name]_library',
             path: path.join(__dirname, 'public/dll', '[name]-manifest.json')
         }),
         // 分离css
