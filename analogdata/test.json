@@ -1,0 +1,198 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": [
+    {
+      "name": "肾上腺癌",
+      "url": "\/ssxa"
+    },
+    {
+      "name": "肛门癌",
+      "url": "\/gangmenai"
+    },
+    {
+      "name": "胆管癌",
+      "url": "\/danguanai"
+    },
+    {
+      "name": "膀胱癌",
+      "url": "\/bangguangai"
+    },
+    {
+      "name": "骨癌",
+      "url": "\/guai"
+    },
+    {
+      "name": "宫颈癌",
+      "url": "\/gongjingai"
+    },
+    {
+      "name": "食道癌",
+      "url": "\/shidaoai"
+    },
+    {
+      "name": "眼癌（眼部黑色素瘤和淋巴瘤）",
+      "url": "\/yan-ai-yan-bu-hei-se-su-liu-he-lin-ba-liu"
+    },
+    {
+      "name": "胆囊癌",
+      "url": "\/dannangai"
+    },
+    {
+      "name": "肾癌",
+      "url": "\/shenai"
+    },
+    {
+      "name": "喉癌",
+      "url": "\/houai"
+    },
+    {
+      "name": "肝癌",
+      "url": "\/ganai"
+    },
+    {
+      "name": "默克尔细胞皮肤癌",
+      "url": "\/mo-ke-er-xi-bao-pi-fu-ai"
+    },
+    {
+      "name": "鼻咽癌",
+      "url": "\/biyanai"
+    },
+    {
+      "name": "口腔癌",
+      "url": "\/kou-qiang-ai"
+    },
+    {
+      "name": "卵巢癌",
+      "url": "\/luanchaoai"
+    },
+    {
+      "name": "胰腺癌",
+      "url": "\/yixianai"
+    },
+    {
+      "name": "阴茎癌",
+      "url": "\/yin-jing-ai"
+    },
+    {
+      "name": "唾液腺癌",
+      "url": "\/tuo-ye-xian-ai"
+    },
+    {
+      "name": "小肠癌",
+      "url": "\/xiaochangai"
+    },
+    {
+      "name": "胃癌",
+      "url": "\/weiai"
+    },
+    {
+      "name": "睾丸癌",
+      "url": "\/gaowanai"
+    },
+    {
+      "name": "胸腺癌",
+      "url": "\/xiongxianai"
+    },
+    {
+      "name": "甲状腺癌",
+      "url": "\/jzxa"
+    },
+    {
+      "name": "阴道癌",
+      "url": "\/yindaoai"
+    },
+    {
+      "name": "外阴癌",
+      "url": "\/waiyinai"
+    },
+    {
+      "name": "脑癌",
+      "url": "\/naoai"
+    },
+    {
+      "name": "乳腺癌",
+      "url": "\/ruxianai"
+    },
+    {
+      "name": "肺癌",
+      "url": "\/feiai"
+    },
+    {
+      "name": "前列腺癌",
+      "url": "\/qlxa"
+    },
+    {
+      "name": "小细胞肺癌",
+      "url": "\/xxbfa"
+    },
+    {
+      "name": "舌癌",
+      "url": "\/sheai"
+    },
+    {
+      "name": "喉癌",
+      "url": "\/houai-311"
+    },
+    {
+      "name": "直肠癌",
+      "url": "\/zhichangai"
+    },
+    {
+      "name": "结肠癌",
+      "url": "\/jiechangai"
+    },
+    {
+      "name": "十二指肠癌",
+      "url": "\/sezca"
+    },
+    {
+      "name": "咽喉癌",
+      "url": "\/yanhouai"
+    },
+    {
+      "name": "唇癌",
+      "url": "\/chunai"
+    },
+    {
+      "name": "软腭癌",
+      "url": "\/ruaneai"
+    },
+    {
+      "name": "输尿管癌",
+      "url": "\/snga"
+    },
+    {
+      "name": "大肠癌",
+      "url": "\/dachangai"
+    },
+    {
+      "name": "贲门癌",
+      "url": "\/bma"
+    },
+    {
+      "name": "肛管癌",
+      "url": "\/gga"
+    },
+    {
+      "name": "尿道癌",
+      "url": "\/nda"
+    },
+    {
+      "name": "舌根癌",
+      "url": "\/sga"
+    },
+    {
+      "name": "食管癌",
+      "url": "\/shiguanai"
+    },
+    {
+      "name": "印戒细胞癌",
+      "url": "\/yjxba"
+    },
+    {
+      "name": "中耳癌",
+      "url": "\/zea"
+    }
+  ]
+}

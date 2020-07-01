@@ -1,0 +1,168 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <!-- 引入样式 -->
+    <% htmlWebpackPlugin.options.cdnConfig.forEach(function(item){ if(item.css){ %>
+        <link href="<%= item.css %>" rel="stylesheet"/>
+    <% }}) %>
+</head>
+<body>
+<div id="indexPage" ref="pageContent">
+    <!-- header -->
+    <%- include common/header.ejs -%>
+    <!-- header -->
+    <!-- banner -->
+    <div class="banner">
+        <div class="box" id="body_parts_all">
+            <el-menu class="b-nav">
+                <el-menu-item v-bind:index="item.id" v-for="item in Body_parts_all" :key="item.id">
+                    <img v-bind:src="item.src" width="20"/>
+                    <span>{{item.name}}</span>
+                </el-menu-item>
+            </el-menu>
+        </div>
+    </div>
+    <!-- banner -->
+    <div class="bgw">
+
+        <h3 class="clearfix box">
+            <div class="t-icon"></div>
+            <span class="t-title">服务项目</span>
+            <span class="t-info">Service Items</span>
+        </h3>
+        <div class="box clearfix hospital">
+            <!-- 服务项目list -->
+            <div class="box-about mr20">
+                <img src="<%= require('../public/imgs/american-hospital@2x.png').default ? require('../public/imgs/american-hospital@2x.png').default : require('../public/imgs/american-hospital@2x.png') %>"
+                     width="44" height="44"/>
+                <strong>美国医院</strong>
+                <p>去美国医院的好处，美国医院的特色以及美国医院治疗哪些疾病最厉害——简短详情介绍…</p>
+                <a>查看详情>></a>
+            </div>
+            <div class="box-about mr20">
+                <img src="<%= require('../public/imgs/japanese-hospital@2x.png').default ? require('../public/imgs/japanese-hospital@2x.png').default : require('../public/imgs/japanese-hospital@2x.png') %>"
+                     width="44" height="44"/>
+                <strong>日本医院</strong>
+                <p>去日本医院的好处，日本医院的特色以及日本医院治疗哪些疾病最厉害——简短详情介绍…</p>
+                <a>查看详情>></a>
+            </div>
+            <div class="box-about">
+                <img src="<%= require('../public/imgs/born@2x.png').default ? require('../public/imgs/born@2x.png').default : require('../public/imgs/born@2x.png') %>"
+                     width="44" height="44"/>
+                <strong>美国生子</strong>
+                <p>去美国医院的好处，美国医院的特色以及美国医院治疗哪些疾病最厉害——简短详情介绍…</p>
+                <a>查看详情>></a>
+            </div>
+            <!-- 服务项目list -->
+        </div>
+
+        <h3 class="clearfix box">
+            <div class="t-icon"></div>
+            <span class="t-title">快速咨询</span>
+            <span class="t-info">Quick consultation</span>
+        </h3>
+        <div class="box clearfix consult">
+            <!-- 快速咨询list -->
+            <div class="box-about mr20">
+                <img src="<%= require('../public/imgs/consult-phone@2x.png').default ? require('../public/imgs/consult-phone@2x.png').default : require('../public/imgs/consult-phone@2x.png') %>"
+                     width="100" height="100"/>
+                <span>联系电话</span>
+                <p>400-100-1111</p>
+            </div>
+            <div class="box-about mr20">
+                <img src="<%= require('../public/imgs/consult-cost@2x.png').default ? require('../public/imgs/consult-cost@2x.png').default : require('../public/imgs/consult-cost@2x.png') %>"
+                     width="100" height="100"/>
+                <span>费用评估</span>
+                <p>安全、公正、准确</p>
+            </div>
+            <div class="box-about">
+                <img src="<%= require('../public/imgs/consult-consult@2x.png').default ? require('../public/imgs/consult-consult@2x.png').default : require('../public/imgs/consult-consult@2x.png') %>"
+                     width="100" height="100"/>
+                <span>在线咨询</span>
+                <p>快速、专业、有效</p>
+            </div>
+            <!-- 快速咨询list -->
+        </div>
+    </div>
+    <div class="box">
+        <div v-for="item in Home_best_hospital">
+            <h3 class="clearfix">
+                <div class="t-icon"></div>
+                <span class="t-title">{{item.name}}</span>
+                <span class="t-info">{{item.nameen}}</span>
+            </h3>
+            <div class="clearfix">
+                <!-- list -->
+                <div class="img-list" v-for="childItem in item.child">
+                    <div>
+                        <img v-bind:src="childItem.picture" width="248" height="190"/>
+                        <span>{{childItem.name}}</span>
+                    </div>
+                    <strong>{{childItem.name}}</strong>
+                    <ul>
+                        <li v-for="departmentItem in item.department" :key="departmentItem._id">
+                            <span class="l-name">{{childItem.name}}</span>
+                            <span class="l-num">{{departmentItem.rank}}</span>
+                        </li>
+                    </ul>
+                </div>
+                <!-- list -->
+            </div>
+        </div>
+        <div class="mt40"></div>
+    </div>
+    <div class="bgw">
+        <%- include index/hospitalization_process.ejs -%>
+    </div>
+    <h3 class="clearfix box">
+        <div class="t-icon"></div>
+        <span class="t-title">最新消息</span>
+        <span class="t-info">Latest news</span>
+    </h3>
+    <div class="box clearfix">
+        <div class="list title-lists" id="CuttingedgeinformationOne">
+            <h2 class="clearfix">
+                <strong class="sq"></strong>
+                <span>前沿资讯</span>
+                <a v-bind:href="Cuttingedgeinformation.href" target="_blank">More>></a>
+            </h2>
+            <div>
+                <img v-bind:src="Cuttingedgeinformation.src" width="223" height="280"/>
+                <ul>
+                    <li v-for="item in Cuttingedgeinformation.data" :key="item._id">
+                        <a v-bind:href="item.href" target="_blank">
+                            <span>></span> {{item.title}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="list title-lists" id="CuttingedgeinformationTwo">
+            <h2 class="clearfix">
+                <strong class="sq"></strong>
+                <span>前沿资讯</span>
+                <a v-bind:href="Cuttingedgeinformation2.href" target="_blank">More>></a>
+            </h2>
+            <div>
+                <img v-bind:src="Cuttingedgeinformation2.src" width="223" height="280"/>
+                <ul>
+                    <li v-for="item in Cuttingedgeinformation2.data" :key="item._id">
+                        <a v-bind:href="item.href" target="_blank">
+                            <span>></span> {{item.title}}
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="mt40"></div>
+    <%- include common/footer.ejs -%>
+    <%- include common/tip.ejs -%>
+</div>
+<% htmlWebpackPlugin.options.cdnConfig.forEach(function(item){ if(item.js && !htmlWebpackPlugin.options.onlyCss){ %>
+    <script type="text/javascript" src="<%= item.js %>"></script>
+<% }}) %>
+
+</body>
+</html>

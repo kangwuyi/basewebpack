@@ -1,0 +1,259 @@
+.list-nav {
+  padding: 15px;
+  font-size: 14px;
+  background: #fff;
+  box-sizing: border-box;
+
+  .sub-nav-title {
+    float: left;
+    padding: 5px 0
+  }
+
+  ul {
+    padding-left: 50px
+  }
+
+  li {
+    float: left;
+    margin: 5px 8px;
+    color: #666
+  }
+}
+
+.list-box .list-div {
+  background: #fff;
+  padding: 10px;
+  display: block;
+  width: 800px;
+  margin-bottom: 20px;
+
+  img {
+    width: 190px;
+    height: 160px;
+    float: left;
+  }
+
+  .list-info {
+    width: 598px;
+    float: right;
+  }
+
+  .t-title {
+    font-size: 20px;
+    font-weight: normal;
+    color: #333;
+    float: left;
+    margin-right: 8px;
+  }
+
+  .t-info {
+    font-size: 14px;
+    font-weight: normal;
+    color: #999;
+    float: left;
+    margin-top: 8px;
+  }
+
+  .t-label {
+    font-size: 12px;
+    background: #ECF0F3;
+    color: #7790A6;
+    float: right;
+    padding: 3px;
+    border-radius: 2px;
+    margin: 3px 0 0 5px;
+  }
+
+  p {
+    font-size: 14px;
+    line-height: 30px;
+    color: #666
+  }
+}
+
+.list-label {
+  margin: 10px 0 20px 0;
+
+  span {
+    border-radius: 2px;
+    float: left;
+    font-size: 12px;
+    margin-right: 5px;
+    padding: 2px 4px
+  }
+
+  .c-blue {
+    background: rgba(237, 245, 255, 1);
+    border: 1px #5b78c4 solid;
+  }
+
+  .c-green {
+    background: rgba(4, 175, 163, 0.12);
+    border: 1px solid #04AFA3;
+  }
+
+}
+
+.list-about {
+  width: 270px;
+}
+
+.title-lists {
+  margin-bottom: 10px;
+  background: #fff;
+  padding: 8px;
+}
+
+.service-list li {
+  float: left;
+  border-right: 1px #e7e7e7 solid;
+  padding: 0 20px 0 0;
+  margin: 15px 20px 15px 0;
+
+  &:nth-child(3n) {
+    padding-right: 0;
+    margin-right: 0;
+    border-right: 0
+  }
+}
+
+.content-box {
+  background: #fff;
+  padding: 40px;
+  width: 740px;
+
+  h4 {
+    font-size: 28px;
+    text-align: center;
+    font-weight: normal;
+  }
+
+  .content-rank {
+    float: left;
+    width: 180px;
+    margin-right: 6px;
+
+    &:nth-child(4n) {
+      margin-right: 0
+    }
+
+    .rank-title {
+      font-size: 14px;
+      padding: 15px;
+      color: #fff;
+      background: #04AFA3
+    }
+
+    .rank-list {
+      border-left: 1px #EDEFF5 solid;
+      border-right: 1px #EDEFF5 solid;
+      border-bottom: 1px #EDEFF5 solid;
+      padding: 8px 15px 0;
+
+      li {
+        border-radius: 2px;
+        border: 1px solid rgba(227, 233, 238, 1);
+        float: left;
+        width: 100%;
+        margin-bottom: 8px;
+
+        span {
+          font-size: 12px;
+          padding: 3px 5px;
+        }
+
+        .l-name {
+          float: left;
+          background: rgba(247, 248, 252, 1);
+          color: #405D76;
+          width: 95px
+        }
+
+        .l-num {
+          float: right;
+          color: #04AFA3;
+          text-align: left;
+        }
+      }
+
+    }
+
+
+  }
+
+  .content-status {
+    padding: 15px 30px 0;
+    background: #F7F8FC;
+    margin-top: 30px;
+
+    li {
+      float: left;
+      border: 1px #ddd solid;
+      padding: 8px 30px;
+      border-radius: 5px;
+      color: #333;
+      font-size: 14px;
+      margin: 0 20px 15px 0;
+
+      &.act {
+        background: rgba(4, 175, 163, 0.12);
+        border: 1px solid #04AFA3;
+        color: #04AFA3
+      }
+
+    }
+
+    p {
+      padding: 15px 0;
+      font-size: 14px;
+      color: #666;
+      line-height: 24px
+    }
+
+    .content-abc {
+      padding: 15px 30px;
+      background: #F7F8FC;
+      margin: 30px 0;
+
+      li {
+        float: left;
+        height: 40px;
+        line-height: 40px;
+        width: 40px;
+        text-align: center;
+        font-size: 14px;
+
+        &.act a {
+          background: #ddd;
+          color: #04AFA3
+        }
+      }
+
+      a {
+        width: 40px;
+        height: 40px;
+        display: block;
+        border-radius: 20px;
+        color: #666;
+
+        &:hover {
+          background: #ddd;
+          color: #04AFA3
+        }
+      }
+    }
+  }
+
+  .next {
+    padding: 0 0 20px 0;
+    font-size: 14px;
+
+    a {
+      color: #999;
+
+      &:hover {
+        color: #04AFA3
+      }
+    }
+  }
+}

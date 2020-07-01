@@ -1,0 +1,688 @@
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "list": [
+      {
+        "key": "1",
+        "title": "看病-综合医院",
+        "list": [
+          {
+            "url_name": "baptist-memorial-hospital-memphis",
+            "picture": "https:\/\/tupian.chujingyi.cn\/3b\/cf\/3bcf37c2c938cd96533669f9207aabe9_396_288.png?x-oss-process=style\/base",
+            "url": "\/usa\/baptist-memorial-hospital-memphis\/",
+            "name": "Baptist Memorial Hospital-Memphis",
+            "description": "位于田纳西州孟菲斯的浸信会纪念医院 - 孟菲斯医院在5个成人手术",
+            "ranking_text": "",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "mayo-clinic",
+            "picture": "https:\/\/tupian.chujingyi.cn\/8b\/f0\/8bf0d15227f442db275b6e72192c716a_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/mayo-clinic\/",
+            "name": "梅奥诊所",
+            "description": "位于明尼苏达州罗切斯特的梅奥诊所在最佳医院荣誉榜上名列第一。它在",
+            "ranking_text": "美国综合医院第1名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "cleveland-clinic",
+            "picture": "https:\/\/tupian.chujingyi.cn\/16\/21\/1621faf6407392592653cab9e25937f4_810_608.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/cleveland-clinic\/",
+            "name": "克利夫兰诊所",
+            "description": "位于俄亥俄州克里夫兰市的克利夫兰诊所在最佳医院荣誉榜上排名第二。",
+            "ranking_text": "美国综合医院第2名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "johns-hopkins-hospital",
+            "picture": "https:\/\/tupian.chujingyi.cn\/c2\/7f\/c27ff7fd6ca363dfb15a5d3728d4fe34_375_500.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/johns-hopkins-hospital\/",
+            "name": "约翰霍普金斯医院",
+            "description": "位于马里兰州巴尔的摩的约翰霍普金斯医院在最佳医院荣誉榜上排名第3",
+            "ranking_text": "美国综合医院第3名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "massachusetts-general-hospital",
+            "picture": "https:\/\/tupian.chujingyi.cn\/d0\/1b\/d01b9e111cf34cd4243b971dcf32bd87_640_480.jpeg?x-oss-process=style\/base",
+            "url": "\/usa\/massachusetts-general-hospital\/",
+            "name": "麻省总医院",
+            "description": "位于马萨诸塞州波士顿的马萨诸塞州综合医院在最佳医院荣誉榜上排名第",
+            "ranking_text": "美国综合医院第4名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "university-of-michigan-hospitals-michigan-medicine",
+            "picture": "https:\/\/tupian.chujingyi.cn\/5a\/28\/5a2891a4f75f00a5cb9322e68c31d367_500_376.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/university-of-michigan-hospitals-michigan-medicine\/",
+            "name": "密歇根大学医院",
+            "description": "位于密歇根州安阿伯市的密歇根大学医院 - 密歇根医学院在最佳医院",
+            "ranking_text": "美国综合医院第5名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "ucsf-medical-center",
+            "picture": "https:\/\/tupian.chujingyi.cn\/d8\/30\/d8309673a3760750b20c6e4a9cf90aab_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/ucsf-medical-center\/",
+            "name": "旧金山大学医学中心",
+            "description": "位于加利福尼亚州旧金山的加州大学旧金山分校医疗中心在最佳医院荣誉",
+            "ranking_text": "美国综合医院第6名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "ut-southwestern-medical-center",
+            "picture": "https:\/\/tupian.chujingyi.cn\/db\/ec\/dbec579c992666ea3eb30c38fa52e0fa_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/ut-southwestern-medical-center\/",
+            "name": "德州大学西南医学中心",
+            "description": "位于德克萨斯州达拉斯的德州大学西南医学中心在全国7个成人专业特色",
+            "ranking_text": "美国综合医院第7名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "ucla-medical-center",
+            "picture": "https:\/\/tupian.chujingyi.cn\/a6\/67\/a667b62193d0038d4836cdff7bc5c71a_500_374.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/ucla-medical-center\/",
+            "name": "加州大学洛杉矶分校医疗中心",
+            "description": "位于加利福尼亚州洛杉矶的加州大学洛杉矶分校医疗中心在最佳医院荣誉",
+            "ranking_text": "美国综合医院第7名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "methodist-hospitals-of-memphis",
+            "picture": "https:\/\/tupian.chujingyi.cn\/2a\/40\/2a4053e249d7897efd26dcbfd3548228_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/methodist-hospitals-of-memphis\/",
+            "name": "孟菲斯卫理公会医院",
+            "description": "位于田纳西州孟菲斯市的孟菲斯医院卫理公司在全国排名为8个儿科专科",
+            "ranking_text": "美国综合医院第8名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          }
+        ]
+      },
+      {
+        "key": "2",
+        "title": "看病-肿瘤医院",
+        "list": [
+          {
+            "url_name": "university-of-texas-md-anderson-cancer-center",
+            "picture": "https:\/\/tupian.chujingyi.cn\/f6\/ae\/f6aefb3d9fa2ba33297e799c4a68decc_1200_900.png?x-oss-process=style\/base",
+            "url": "\/usa\/university-of-texas-md-anderson-cancer-center\/",
+            "name": "MD安德森癌症中心",
+            "description": "位于德克萨斯州休斯顿的德克萨斯大学MD安德森癌症中心在全国排名为",
+            "ranking_text": "美国肿瘤医院第1名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 2,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "癌症专科",
+              "url_name": "ai-zheng-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:02:11",
+              "updated_at": "2019-09-09 21:04:10",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "memorial-sloan-kettering-cancer-center",
+            "picture": "https:\/\/tupian.chujingyi.cn\/cc\/36\/cc367e8542e452d3a8a3fa8c5f6ef6e2_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/memorial-sloan-kettering-cancer-center\/",
+            "name": "纪念斯隆-凯特琳癌症中心",
+            "description": "纽约州纽约纪念斯隆 - 凯特琳癌症中心在全国范围内分为4个成人专",
+            "ranking_text": "美国肿瘤医院第2名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 2,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "癌症专科",
+              "url_name": "ai-zheng-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:02:11",
+              "updated_at": "2019-09-09 21:04:10",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "mayo-clinic",
+            "picture": "https:\/\/tupian.chujingyi.cn\/8b\/f0\/8bf0d15227f442db275b6e72192c716a_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/mayo-clinic\/",
+            "name": "梅奥诊所",
+            "description": "位于明尼苏达州罗切斯特的梅奥诊所在最佳医院荣誉榜上名列第一。它在",
+            "ranking_text": "美国肿瘤医院第3名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "dana-farber-cancer-institute",
+            "picture": "https:\/\/tupian.chujingyi.cn\/04\/ee\/04ee18c87845eaac245621c20a114109_640_492.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/dana-farber-cancer-institute\/",
+            "name": "丹娜法伯癌症研究院",
+            "description": "马萨诸塞州波士顿的Dana-Farber癌症研究所在全国排名中有",
+            "ranking_text": "美国肿瘤医院第4名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 2,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "癌症专科",
+              "url_name": "ai-zheng-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:02:11",
+              "updated_at": "2019-09-09 21:04:10",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "brigham-and-women-s-hospital",
+            "picture": "https:\/\/tupian.chujingyi.cn\/26\/3e\/263e612805ae5256f50ff95d971aad8c_500_327.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/brigham-and-women-s-hospital\/",
+            "name": "布莱根妇女医院",
+            "description": "马萨诸塞州波士顿的布莱根妇女医院在最佳医院荣誉榜上排名第20位。",
+            "ranking_text": "美国肿瘤医院第4名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "cleveland-clinic",
+            "picture": "https:\/\/tupian.chujingyi.cn\/16\/21\/1621faf6407392592653cab9e25937f4_810_608.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/cleveland-clinic\/",
+            "name": "克利夫兰诊所",
+            "description": "位于俄亥俄州克里夫兰市的克利夫兰诊所在最佳医院荣誉榜上排名第二。",
+            "ranking_text": "美国肿瘤医院第5名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "johns-hopkins-hospital",
+            "picture": "https:\/\/tupian.chujingyi.cn\/c2\/7f\/c27ff7fd6ca363dfb15a5d3728d4fe34_375_500.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/johns-hopkins-hospital\/",
+            "name": "约翰霍普金斯医院",
+            "description": "位于马里兰州巴尔的摩的约翰霍普金斯医院在最佳医院荣誉榜上排名第3",
+            "ranking_text": "美国肿瘤医院第6名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "university-of-washington-medical-center",
+            "picture": "https:\/\/tupian.chujingyi.cn\/66\/50\/66505a92cffe1a0232bfd0814ff8a15e_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/university-of-washington-medical-center\/",
+            "name": "华盛顿大学医学中心医院",
+            "description": "位于华盛顿州西雅图的华盛顿大学医学中心在全国排名中有9种成人特色",
+            "ranking_text": "美国肿瘤医院第7名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": null
+          },
+          {
+            "url_name": "seattle-cancer-care-alliance",
+            "picture": "https:\/\/tupian.chujingyi.cn\/0c\/07\/0c07d0aedd4f975e3ff703efd1ea3424_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/seattle-cancer-care-alliance\/",
+            "name": "西雅图癌症护理联盟",
+            "description": "位于华盛顿州西雅图的西雅图癌症护理联盟在全国范围内被评为1个成人",
+            "ranking_text": "美国肿瘤医院第7名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 2,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "癌症专科",
+              "url_name": "ai-zheng-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:02:11",
+              "updated_at": "2019-09-09 21:04:10",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "ucsf-medical-center",
+            "picture": "https:\/\/tupian.chujingyi.cn\/d8\/30\/d8309673a3760750b20c6e4a9cf90aab_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/ucsf-medical-center\/",
+            "name": "旧金山大学医学中心",
+            "description": "位于加利福尼亚州旧金山的加州大学旧金山分校医疗中心在最佳医院荣誉",
+            "ranking_text": "美国肿瘤医院第8名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 1,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "综合医院",
+              "url_name": "zong-he-yi-yuan",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:00:54",
+              "updated_at": "2019-09-09 21:02:30",
+              "deleted_at": 0
+            }
+          }
+        ]
+      },
+      {
+        "key": "3",
+        "title": "看病-儿童医院",
+        "list": [
+          {
+            "url_name": "boston-children-s-hospital",
+            "picture": "https:\/\/tupian.chujingyi.cn\/0e\/b4\/0eb49380f1529fd9a2b59a01add51347_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/boston-children-s-hospital\/",
+            "name": "波士顿儿童医院",
+            "description": "波士顿儿童医院2019年USnews评其为美国最好儿童医院，波士",
+            "ranking_text": "美国儿科第1名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 8,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "儿科",
+              "url_name": "er-ke",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:03:49",
+              "updated_at": "2019-09-09 21:03:49",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "children-s-hospital-of-philadelphia",
+            "picture": "https:\/\/tupian.chujingyi.cn\/5a\/a0\/5aa005f0cec548db5e999a7b550b0939_500_331.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/children-s-hospital-of-philadelphia\/",
+            "name": "费城儿童医院",
+            "description": "费城儿童医院是美国第一家专门照顾儿童的医院，在usnews被评为",
+            "ranking_text": "美国儿科第2名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 8,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "儿科",
+              "url_name": "er-ke",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:03:49",
+              "updated_at": "2019-09-09 21:03:49",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "cincinnati-children-s-hospital-medical-center",
+            "picture": "https:\/\/tupian.chujingyi.cn\/d7\/58\/d758f70e902d7d8831568a26ffea93fb_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/cincinnati-children-s-hospital-medical-center\/",
+            "name": "辛辛那提儿童医院医疗中心",
+            "description": "辛辛那提儿童医院医疗中心位于俄亥俄州的辛辛那提，英文Cincin",
+            "ranking_text": "美国儿科第3名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 8,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "儿科",
+              "url_name": "er-ke",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:03:49",
+              "updated_at": "2019-09-09 21:03:49",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "children-s-hospital-los-angeles",
+            "picture": "https:\/\/tupian.chujingyi.cn\/93\/78\/9378d86856fe6d2a18219819192f3997_1280_960.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/children-s-hospital-los-angeles\/",
+            "name": "洛杉矶儿童医院",
+            "description": "洛杉矶儿童医院（CHLA）是一家非营利性的儿科学术医疗中心，位于",
+            "ranking_text": "美国儿科第5名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 8,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "儿科",
+              "url_name": "er-ke",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:03:49",
+              "updated_at": "2019-09-09 21:03:49",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "children-s-national-medical-center",
+            "picture": "https:\/\/tupian.chujingyi.cn\/5e\/e7\/5ee7f0e54e2e0051ccad53630f12dc39_1200_900.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/children-s-national-medical-center\/",
+            "name": "美国国家儿童医疗中心",
+            "description": "美国国家儿童医疗中心是美国排名前十儿童医院，美国国家儿童医疗中心",
+            "ranking_text": "美国儿科第6名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 8,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "儿科",
+              "url_name": "er-ke",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:03:49",
+              "updated_at": "2019-09-09 21:03:49",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "c-s-mott-children-s-hospital-michigan-medicine",
+            "picture": "https:\/\/tupian.chujingyi.cn\/21\/87\/218783c33ac715ba7fed984f695fd364_1200_900.png?x-oss-process=style\/base",
+            "url": "\/usa\/c-s-mott-children-s-hospital-michigan-medicine\/",
+            "name": "密歇根州儿童医院",
+            "description": "密歇根大学CS莫特儿童医院，％3Ca href =“\/ best",
+            "ranking_text": "美国儿科第10名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 8,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "儿科",
+              "url_name": "er-ke",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:03:49",
+              "updated_at": "2019-09-09 21:03:49",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "children-s-hospital-colorado",
+            "picture": "https:\/\/tupian.chujingyi.cn\/4c\/cf\/4ccff077ae64255478e834ce81c89773_1304_900.png?x-oss-process=style\/base",
+            "url": "\/usa\/children-s-hospital-colorado\/",
+            "name": "科罗拉多儿童医院Children's Hospital Colorado",
+            "description": "科罗拉儿童医院是美国科罗拉州儿童专科医院，美国儿童医院排名前列，",
+            "ranking_text": "美国儿科第10名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 8,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "儿科",
+              "url_name": "er-ke",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:03:49",
+              "updated_at": "2019-09-09 21:03:49",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "children-s-medical-center-dallas",
+            "picture": "https:\/\/tupian.chujingyi.cn\/6f\/a4\/6fa48fc0b2e04e26a809737a639e1157_500_332.jpg?x-oss-process=style\/base",
+            "url": "\/usa\/children-s-medical-center-dallas\/",
+            "name": "达拉斯儿童医疗中心",
+            "description": "达拉斯儿童医疗中心位于德克萨斯州达拉斯市，是全国排名前10位的儿",
+            "ranking_text": "美国儿科第10名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 8,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "儿科",
+              "url_name": "er-ke",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:03:49",
+              "updated_at": "2019-09-09 21:03:49",
+              "deleted_at": 0
+            }
+          },
+          {
+            "url_name": "children-s-mercy-kansas-city",
+            "picture": "https:\/\/tupian.chujingyi.cn\/13\/3a\/133afebf1359cf01bbdf07cf59d5d443_1245_900.png?x-oss-process=style\/base",
+            "url": "\/usa\/children-s-mercy-kansas-city\/",
+            "name": "堪萨斯城儿童慈善会",
+            "description": "Children's Mercy Kansas City in ",
+            "ranking_text": "美国儿科第10名",
+            "country_map": {
+              "title": "美国",
+              "value": "usa"
+            },
+            "type": {
+              "id": 8,
+              "dict_type": "hospital_category",
+              "parent_id": 0,
+              "name": "儿科",
+              "url_name": "er-ke",
+              "sort_order": 0,
+              "created_at": "2019-09-09 21:03:49",
+              "updated_at": "2019-09-09 21:03:49",
+              "deleted_at": 0
+            }
+          }
+        ]
+      }
+    ],
+    "meta": {
+      "title": "美国看病就医,美国医院及就医案例",
+      "keywords": "美国看病，美国就医，美国看病服务机构",
+      "description": "提供美国看病就医相关的美国医院信息，美国看病最新药物，美国就医案例等信息"
+    }
+  }
+}

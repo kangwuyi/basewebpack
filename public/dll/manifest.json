@@ -1,0 +1,24 @@
+{
+  "name": "_dll_commoncss",
+  "content": {
+    "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/css-loader/dist/cjs.js?!./public/css/common.css": {
+      "id": "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/css-loader/dist/cjs.js?!./public/css/common.css",
+      "buildMeta": {
+        "providedExports": true
+      }
+    },
+    "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js": {
+      "id": "./node_modules/style-loader/dist/runtime/injectStylesIntoStyleTag.js",
+      "buildMeta": {
+        "providedExports": true
+      }
+    },
+    "./public/css/common.css": {
+      "id": "./public/css/common.css",
+      "buildMeta": {
+        "moduleConcatenationBailout": "module.id",
+        "providedExports": true
+      }
+    }
+  }
+}
