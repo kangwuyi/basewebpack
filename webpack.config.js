@@ -8,13 +8,15 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 const HtmlCriticalWebpackPlugin = require('html-critical-webpack-plugin');
-const glob = require('glob')
-const PurgecssPlugin = require('purgecss-webpack-plugin')
+const glob = require('glob');
+const PurgecssPlugin = require('purgecss-webpack-plugin');
+var wgentry = require('webpack-glob-entry'); // 模糊匹配
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
 /*const middleware = require('webpack-dev-middleware');
 const instance = middleware(compiler);*/
 const doMode = process.env.NODE_ENV !== 'production' ? 'development' : 'production';
 const doDev = process.env.NODE_ENV !== 'production';
-
+console.log(doDev)
 if (module.hot) {
     module.hot.accept()
 }
@@ -93,7 +95,6 @@ const externalConfig = [
         css: 'https://cdn.bootcdn.net/ajax/libs/element-ui/2.13.2/theme-chalk/index.css'
     },
 ];
-
 /**
  * clientConfig
  * @description 配置文件
@@ -101,18 +102,20 @@ const externalConfig = [
  * @param output 出口文件
  * @param module 模块
  * @param plugins 插件
+ * @param optimization 代码分割
  */
 var clientConfig = {
     target: 'web',
     mode: doMode, // production // development
-    devtool: 'source-map',
+    devtool: doDev ? 'source-map' : false,
     entry: {
         index: './public/js/index.js',
         info: './public/js/info.js',
         list: './public/js/list.js',
         main: ['./public/js/index.js', './public/js/info.js', './public/js/list.js'],
         get: './public/js/get/body_parts_all.js',
-        // maincss: ['./public/scss/reset.scss', './public/scss/layout.scss', './public/scss/index.scss']
+        //main_style: Object.values(wgentry('./public/scss/*.scss')),
+        main_style: ['./public/scss/reset.scss', './public/scss/layout.scss', './public/scss/index.scss']
     },
     output: {
         publicPath: './',
@@ -135,14 +138,20 @@ var clientConfig = {
                                 ['@babel/preset-env', {
                                     targets: {
                                         browsers: ['> 1%', 'last 2 version']
-                                    }
+                                        // "edge": "17",
+                                        // "firefox": "60",
+                                        // "chrome": "67",
+                                        // "safari": "11.1",
+                                    },
+                                    "corejs": "2",
+                                    useBuiltIns: 'usage'
                                 }]
 
                             ]
                         }
                     }
                 ],
-                exclude: ['/node_module/']
+                exclude: /((sc|sa|le|c)ss\/.*)|(node_modules\/.*)/
             },
             {
                 test: /\.(sa|sc|c|le)ss$/,
@@ -166,7 +175,9 @@ var clientConfig = {
                         options: {
                             publicPath: './',
                             hmr: doDev,
-                            minimize: !doDev
+                            minimize: !doDev,
+                            sourceMap: doDev,
+                            esModule: true,
                         }
                     },
                     /**
@@ -174,9 +185,7 @@ var clientConfig = {
                      * @description 解析 css
                      * @param options.importLoaders {number} 在 css-loader 前应用的 loader 的数
                      * @param options.modules {boolean} 启用/禁用 css-modules 模式
-                     * @param options.camelCase {boolean} 导出以驼峰化命名的类名
                      * @param options.sourceMap {boolean} 启用/禁用 Sourcemaps
-                     * @param options.minimize {boolean} 启用/禁用 压缩
                      * @param options.url {boolean} 启用/禁用 url() 处理
                      */
                     {
@@ -184,10 +193,7 @@ var clientConfig = {
                         options: {
                             importLoaders: 2,
                             modules: false,
-                            camelCase: false,
-                            sourceMap: true,
-                            minimize: true,
-                            url: true
+                            sourceMap: doDev,
                         }
                     },
                     {
@@ -323,6 +329,11 @@ var clientConfig = {
     },
     plugins: [
         /**
+         * NamedModulesPlugin
+         * @description 用于启动 HMR 时可以显示模块的相对路径，启动模块热替换的插件
+         */
+        new webpack.HotModuleReplacementPlugin(),
+        /**
          * CleanWebpackPlugin
          * @description 清理生成文件夹
          * @param dry {boolean} 模拟删除，用来测试，false 则真的删除
@@ -334,6 +345,11 @@ var clientConfig = {
             verbose: true,
             cleanOnceBeforeBuildPatterns: ['**/*', '!noimgs', '!noimgs/**/*']
         }),
+        /**
+         * FixStyleOnlyEntriesPlugin
+         * @description 以 css 为入口文件时，会输出多余的 js 文件，删之
+         */
+        new FixStyleOnlyEntriesPlugin(),
         /**
          * MiniCssExtractPlugin
          * @description 分离 css 文件
@@ -361,7 +377,7 @@ var clientConfig = {
          * @param 4 {array} 插入文件
          * @param 5 {array} 插入 cdn
          */
-        new HtmlWebpackPlugin(getHtmlConfig('index.html', 'view/index.ejs', '首页', ['main', 'get'], externalConfig)),
+        new HtmlWebpackPlugin(getHtmlConfig('index.html', 'view/index.ejs', '首页', ['main', 'get', 'main_style'], externalConfig)),
         new HtmlWebpackPlugin(getHtmlConfig('list.html', 'view/list.ejs', '首页', ['main'], externalConfig)),
         new HtmlWebpackPlugin(getHtmlConfig('info.html', 'view/info.ejs', '首页', ['main'], externalConfig)),
         /**
@@ -382,22 +398,18 @@ var clientConfig = {
                 filepath: path.resolve(__dirname, './public/dll/elementcss.css'),
                 outputPath: 'css',
                 publicPath: path.posix.join('./', 'css'),
-                includeSourcemap: false,
+                includeSourcemap: doDev,
                 hash: true,
                 typeOfAsset: 'css'
             }, {
                 filepath: path.resolve(__dirname, './public/dll/commoncss.css'),
                 outputPath: 'css',
                 publicPath: path.posix.join('./', 'css'),
-                includeSourcemap: false,
+                includeSourcemap: doDev,
                 hash: true,
                 typeOfAsset: 'css'
-            }]),
-        /**
-         * NamedModulesPlugin
-         * @description 用于启动 HMR 时可以显示模块的相对路径，启动模块热替换的插件
-         */
-        new webpack.HotModuleReplacementPlugin(),
+            }
+        ]),
         /**
          * HtmlCriticalWebpackPlugin
          * @description
@@ -479,7 +491,7 @@ var clientConfig = {
                 },
                 test: /\.js(\?.*)?$/i,
                 include: ['./public/js/index.js', './public/js/info.js', './public/js/list.js'],
-                exclude: ['/node_module/', '/public/imgs/'],
+                exclude: ['/node_module/', '/public/imgs/', '/public/scss/', '/public/css/'],
                 chunkFilter: (chunk) => {
                     /**
                      * `vendor` 模块不压缩
@@ -488,7 +500,7 @@ var clientConfig = {
 
                 },
                 cache: true,
-                sourceMap: true,
+                sourceMap: doDev,
                 parallel: true,
                 extractComments: false,
             }),
@@ -498,6 +510,7 @@ var clientConfig = {
              * @param assetNameRegExp {string} 正则表达式，指示应优化\最小化的资产的名称。
              * @param cssProcessor {object} 优化\最小化CSS的CSS处理器
              * @param canPrint {boolean}  指示插件是否可以将消息打印到控制台
+             * @param cssProcessorOptions 如果是生产环境，一定要设值为 false，以取消掉 map 之类
              * @param cssProcessorOptions.safe {boolean}  避免 cssnano 重新计算 z-index
              * @param cssProcessorOptions.autoprefixer {boolean} cssnano 自身集成 autoprefixer 功能，清理无关前缀的需要关闭 autoprefixer，转用 postcss 的 autoprefixer
              * @param cssProcessorOptions.map.inline {boolean} 不生成内联映射,这样配置就会生成一个source-map文件
@@ -507,29 +520,35 @@ var clientConfig = {
                 assetNameRegExp: /\.css\.*(?!.*map)/g,
                 cssProcessor: require('cssnano'),
                 canPrint: true,
-                cssProcessorOptions: {
+                cssProcessorOptions: !doDev ? false : {
                     safe: true,
                     autoprefixer: false,
                     discardComments: {removeAll: true},
                     map: {
-                        inline: false,
-                        annotation: true
+                        inline: doDev,
+                        annotation: doDev
                     }
-                }
+                },
             })
         ],
         /**
          * splitChunks
          * @description 公共部分的提取
+         * @param chunks {string} initial 异步代码分割，all 同步代码分割
+         * @param minSize {number} 大于该值做代码分割
          */
         splitChunks: {
+            chunks: "all",
+            minSize: 300,
+            minChunks: 1,
+            maxAsyncRequests: 5,
+            maxInitialRequests: 3,
+            automaticNameDelimiter: '~',
+            name: true,
             cacheGroups: {
-                /**
-                 *
-                 */
                 commons: {
                     name: 'commons',    //提取出来的文件命名
-                    chunks: 'initial',  //initial表示提取入口文件的公共部分
+                    chunks: 'initial',
                     minChunks: 2,       //表示提取公共部分最少的文件数
                     minSize: 0,         //表示提取公共部分最小的大小
                     priority: 0
