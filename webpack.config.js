@@ -329,7 +329,7 @@ var clientConfig = {
          * @param cleanOnceBeforeBuildPatterns {array} 排除文件
          */
         new CleanWebpackPlugin({
-            dry: doDev,
+            dry: false,
             verbose: true,
             cleanOnceBeforeBuildPatterns: ['**/*', '!noimgs', '!noimgs/**/*']
         }),
