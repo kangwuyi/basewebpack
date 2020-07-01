@@ -12,11 +12,11 @@ const glob = require('glob');
 const PurgecssPlugin = require('purgecss-webpack-plugin');
 var wgentry = require('webpack-glob-entry'); // 模糊匹配
 const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const ManifestPlugin = require('webpack-manifest-plugin');
 /*const middleware = require('webpack-dev-middleware');
 const instance = middleware(compiler);*/
-const doMode = process.env.NODE_ENV !== 'production' ? 'development' : 'production';
 const doDev = process.env.NODE_ENV !== 'production';
-console.log(doDev)
+const doMode = doDev ? 'development' : 'production';
 if (module.hot) {
     module.hot.accept()
 }
@@ -114,8 +114,8 @@ var clientConfig = {
         list: './public/js/list.js',
         main: ['./public/js/index.js', './public/js/info.js', './public/js/list.js'],
         get: './public/js/get/body_parts_all.js',
-        //main_style: Object.values(wgentry('./public/scss/*.scss')),
-        main_style: ['./public/scss/reset.scss', './public/scss/layout.scss', './public/scss/index.scss']
+        main_style: Object.values(wgentry('./public/scss/*.scss')),
+        //main_style: ['./public/scss/reset.scss', './public/scss/layout.scss', './public/scss/index.scss']
     },
     output: {
         publicPath: './',
@@ -329,11 +329,6 @@ var clientConfig = {
     },
     plugins: [
         /**
-         * NamedModulesPlugin
-         * @description 用于启动 HMR 时可以显示模块的相对路径，启动模块热替换的插件
-         */
-        new webpack.HotModuleReplacementPlugin(),
-        /**
          * CleanWebpackPlugin
          * @description 清理生成文件夹
          * @param dry {boolean} 模拟删除，用来测试，false 则真的删除
@@ -360,7 +355,11 @@ var clientConfig = {
             filename: doDev ? 'css/[name].css' : 'css/[name].[hash].min.css',
             chunkFilename: doDev ? '[id].css' : '[name].[hash].min.css',
         }),
-
+        /**
+         * webpack-manifest-plugin
+         * @description 生成 manifest.json 插入文档
+         */
+        new ManifestPlugin(),
         /**
          * PurgecssPlugin
          * @description 移除无用的 css，建校 css 大小
@@ -394,15 +393,16 @@ var clientConfig = {
          * @param publicPath 浏览器路径
          */
         new AddAssetHtmlPlugin([
-            {
+           /* {
                 filepath: path.resolve(__dirname, './public/dll/elementcss.css'),
                 outputPath: 'css',
                 publicPath: path.posix.join('./', 'css'),
                 includeSourcemap: doDev,
                 hash: true,
                 typeOfAsset: 'css'
-            }, {
-                filepath: path.resolve(__dirname, './public/dll/commoncss.css'),
+            }, */
+            {
+                filepath: path.resolve(__dirname, './public/dll/public_style.css'),
                 outputPath: 'css',
                 publicPath: path.posix.join('./', 'css'),
                 includeSourcemap: doDev,
@@ -434,7 +434,12 @@ var clientConfig = {
          */
         new webpack.ProvidePlugin({
             _: "underscore"
-        })
+        }),
+        /**
+         * NamedModulesPlugin
+         * @description 用于启动 HMR 时可以显示模块的相对路径，启动模块热替换的插件
+         */
+        new webpack.HotModuleReplacementPlugin(),
     ],
     /**
      * devServer

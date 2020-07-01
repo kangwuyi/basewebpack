@@ -7,6 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "export NODE_ENV=development && webpack --mode development --config webpack.config.js",
     "build": "export NODE_ENV=production && webpack --mode production --config webpack.config.js",
+    "dlldev": "export NODE_ENV=development && webpack --mode development --config webpack.dll.config.js",
+    "dllbuild": "export NODE_ENV=production && webpack --mode production --config webpack.dll.config.js",
     "hot": "export NODE_ENV=development && webpack-dev-server --mode development --config webpack.config.js"
   },
   "author": "",
@@ -70,7 +72,8 @@
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.11.0",
     "webpack-fix-style-only-entries": "^0.5.1",
-    "webpack-glob-entry": "^2.1.1"
+    "webpack-glob-entry": "^2.1.1",
+    "webpack-manifest-plugin": "^2.2.0"
   },
   "sideEffects": [
     "*.css"

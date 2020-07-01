@@ -1,5 +1,5 @@
 {
-  "name": "_dll_commoncss",
+  "name": "public_style.dll.[ext]",
   "content": {
     "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/css-loader/dist/cjs.js?!./public/css/common.css": {
       "id": "./node_modules/mini-css-extract-plugin/dist/loader.js?!./node_modules/css-loader/dist/cjs.js?!./public/css/common.css",

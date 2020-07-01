@@ -2,45 +2,43 @@ const path = require('path');
 const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
-const {
-    BundleAnalyzerPlugin
-} = require('webpack-bundle-analyzer')
-
-const devMode = process.env.NODE_ENV !== 'production' ? 'development' : 'production';
+const {BundleAnalyzerPlugin} = require('webpack-bundle-analyzer')
+const FixStyleOnlyEntriesPlugin = require("webpack-fix-style-only-entries");
+const doDev = process.env.NODE_ENV !== 'production';
+const doMode = doDev ? 'development' : 'production';
 
 const dllPath = path.join(__dirname, 'public/dll');
 
 module.exports = {
     target: 'web',
-    mode: devMode, // production // development
+    mode: doMode,
     entry: {
-        //elementjs:['./public/js/element.js'],
-        elementcss: ['./public/css/element.css'],
-        commoncss: ['./public/css/common.css']
+        element_ui: ['./public/css/element.css'],
+        public_style: ['./public/css/common.css']
     },
     output: {
         path: dllPath,
-        filename: '[name].js',
-        library: '_dll_[name]'
+        filename: '[name].dll.js',
+        library: '[name]_library'
     },
     module: {
         rules: [
             {
-                test: /\.js$/, // 值一个正则，符合这些正则的资源会用一个loade来处理
+                test: /\.js$/,
                 use: {
-                    loader: 'babel-loader', // 使用bable-loader来处理
+                    loader: 'babel-loader',
                     options: {  // 指定参数
                         presets: [
                             ['@babel/preset-env', {
                                 targets: {
-                                    browsers: ['> 1%', 'last 2 version'] //具体可以去babel-preset里面查看
+                                    browsers: ['> 1%', 'last 2 version']
                                 }
                             }]
 
-                        ] // 指定哪些语法编译
+                        ]
                     }
                 },
-                exclude: ['/node_module/', '/public/css/'] // 排除在外
+                exclude: ['/node_module/', '/public/css/']
             },
             {
                 test: /\.(sa|sc|c|le)ss$/,
@@ -53,7 +51,7 @@ module.exports = {
                             // 默认情况下，使用的是webpackOptions.output中publicPath
                             publicPath: './',
                             //开发环境配置热更新
-                            hmr: process.env.NODE_ENV === 'development',
+                            hmr: doDev,
                             minimize: true
                         }
                     },
@@ -85,43 +83,48 @@ module.exports = {
             //cleanOnceBeforeBuildPatterns: ['**/*', '!analogdataImgs', '!analogdataImgs/**/*']
         }),
         new webpack.DllPlugin({
-            name: '_dll_[name]',
-            path: path.join(__dirname, 'public/dll', 'manifest.json')
-        }),
-        new BundleAnalyzerPlugin({
-            analyzerMode: 'static'
+            name: '[name].dll.[ext]',
+            path: path.join(__dirname, 'public/dll', '[name]-manifest.json')
         }),
         // 分离css
         new MiniCssExtractPlugin({
             // 分离文件路径
-            filename: devMode !== 'production'  ? '[name].css' : '[name].[hash].min.css',
-            chunkFilename: devMode !== 'production' ? '[id].css' : '[name].[hash].min.css'
-        })
+            filename: doDev ? '[name].dll.css' : '[name].[hash].dll.min.css',
+            chunkFilename: doDev ? '[id].dll.css' : '[name].[hash].dll.min.css'
+        }),
+        new BundleAnalyzerPlugin({
+            analyzerMode: 'static'
+        }),
+        /**
+         * FixStyleOnlyEntriesPlugin
+         * @description 以 css 为入口文件时，会输出多余的 js 文件，删之
+         */
+        //new FixStyleOnlyEntriesPlugin(),
     ],
     optimization: {
         splitChunks: {
             cacheGroups: {
-               /* elementScript: {
-                    name: 'elementjs',
-                    chunks: 'async',
-                    priority: 10,
-                    reuseExistingChunk: true,
-                    enforce: true
-                },*/
-                elementStyles: {
-                    name: 'elementcss',
-                    chunks: 'async',
+                /* elementScript: {
+                     name: 'elementjs',
+                     chunks: 'async',
+                     priority: 10,
+                     reuseExistingChunk: true,
+                     enforce: true
+                 },*/
+                /*elementStyles: {
+                    name: 'element_ui',
+                    chunks: 'all',
                     priority: 10,
                     reuseExistingChunk: true,
                     enforce: true
                 },
                 commonStyles: {
-                    name: 'commoncss',
-                    chunks: 'async',
+                    name: 'public_style',
+                    chunks: 'all',
                     priority: 10,
                     reuseExistingChunk: true,
                     enforce: false
-                }
+                }*/
             }
         }/*,
         runtimeChunk: {
