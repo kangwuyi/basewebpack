@@ -423,7 +423,7 @@ var clientConfig = {
          * @description css 插入文档，减少调用 .css 文件
          * @param penthouse.blockJSRequests {boolean} 调用打包后的JS文件
          */
-        new HtmlCriticalWebpackPlugin({
+        doDev ? function(){} : new HtmlCriticalWebpackPlugin({
             base: path.resolve(__dirname, 'dist'),
             src: 'index.html',
             dest: 'index.html',

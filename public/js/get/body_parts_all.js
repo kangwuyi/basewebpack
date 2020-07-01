@@ -1,3 +1,7 @@
+/*!
+ * 身体部位接口 /body_parts/all
+ * @url http://apiv2.chujingyi.cn/v2/body_parts/all
+ */
 import BS from '../common/BinarySearch';
 
 export default {

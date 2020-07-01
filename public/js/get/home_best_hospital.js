@@ -1,3 +1,7 @@
+/*!
+ * 推荐医院 /home/best_hospital
+ * @url http://apiv2.chujingyi.cn/v2/home/best_hospital
+ */
 export default {
     data: {},
     methods: function (cb) {
