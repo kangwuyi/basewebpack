@@ -33,26 +33,36 @@
   float: left;
   margin-top: 12px
 }
-
+.kk_dd--f{
+  color: #3a8ee6;
+}
+.kk--f{
+  color: #3a8ee6;
+}
+.kk_ddf{
+  color: #3a8ee6;
+}
 .banner {
-  .el-menu-item {
-    img {
-      float: left;
-      margin-top: 20px
-    }
+  .el-menu {
+    .el-submenu__title {
+      img {
+        float: left;
+        margin-top: 20px
+      }
 
-    span {
-      margin-left: 20px
-    }
+      span {
+        margin-left: 20px
+      }
 
-    &:hover {
-      background: rgba(4, 175, 163, 0.3);
-      color: #04AFA3
-    }
+      &:hover {
+        background: rgba(4, 175, 163, 0.3);
+        color: #04AFA3
+      }
 
-    &.is-active {
-      background: rgba(4, 175, 163, 0.3);
-      color: #04AFA3
+      &.is-active {
+        background: rgba(4, 175, 163, 0.3);
+        color: #04AFA3
+      }
     }
   }
 }
@@ -250,4 +260,8 @@ h3 {
 .process-line {
   margin-top: 35px;
   float: left;
+}
+
+.el-submenu__title {
+
 }

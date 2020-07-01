@@ -14,16 +14,7 @@
     <%- include common/header.ejs -%>
     <!-- header -->
     <!-- banner -->
-    <div class="banner">
-        <div class="box" id="body_parts_all">
-            <el-menu class="b-nav">
-                <el-menu-item v-bind:index="item.id" v-for="item in Body_parts_all" :key="item.id">
-                    <img v-bind:src="item.src" width="20"/>
-                    <span>{{item.name}}</span>
-                </el-menu-item>
-            </el-menu>
-        </div>
-    </div>
+    <%- include index/NavMenu.ejs -%>
     <!-- banner -->
     <div class="bgw">
 

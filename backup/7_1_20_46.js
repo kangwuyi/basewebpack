@@ -114,8 +114,7 @@ var clientConfig = {
         list: './public/js/list.js',
         main: ['./public/js/index.js', './public/js/info.js', './public/js/list.js'],
         get: './public/js/get/body_parts_all.js',
-        //main_style: Object.values(wgentry('./public/scss/*.scss')),
-        main_style: [ './public/scss/layout.scss','./public/scss/index.scss'],
+        main_style: Object.values(wgentry('./public/scss/*.scss')),
     },
     output: {
         publicPath: './',
@@ -168,7 +167,7 @@ var clientConfig = {
                      * @description css 分离
                      * @param options.publicPath {string} 公共路径，默认情况下，使用的是webpackOptions.output中publicPath
                      * @param options.hmr {boolean} 开发环境配置热更新
-                     * @param options.minimize {boolean} 压缩优化
+                     * @param options.minimize {boolean}
                      */
                     {
                         loader: MiniCssExtractPlugin.loader,
@@ -226,13 +225,12 @@ var clientConfig = {
                         /**
                          * sass-loader
                          * @description 解析 scss
-                         * @param outputStyle {string} 'compressed' 压缩
                          */
                         loader: 'sass-loader',
                         options: {
                             sourceMap: doDev,
                             sassOptions: {
-                                outputStyle: false,
+                                outputStyle: 'compressed',
                             },
                         },
                     },

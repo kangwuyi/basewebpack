@@ -19,7 +19,7 @@ module.exports = {
     output: {
         path: dllPath,
         filename: '[name].dll.js',
-        library: '[name]_library'
+        library: '[name]_[hash]'
     },
     module: {
         rules: [
@@ -88,7 +88,7 @@ module.exports = {
          * @param name {string} 要与 output.library 保持一致
          */
         new webpack.DllPlugin({
-            name: '[name]_library',
+            name: '[name]_[hash]',
             path: path.join(__dirname, 'public/dll', '[name]-manifest.json')
         }),
         // 分离css

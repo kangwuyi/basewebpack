@@ -22,7 +22,8 @@ let pageContent = new Vue({
             NewJoinHospital: {},
             Body_parts_all: {},
             Home_best_hospital:{},
-            Disease_footer_recommend:{}
+            Disease_footer_recommend:{},
+            isCollapse: true
         }
     },
     methods: {
@@ -119,6 +120,12 @@ let pageContent = new Vue({
             g.next();
             g.next()
 
+        },
+        handleOpen(key, keyPath) {
+            console.log(key, keyPath);
+        },
+        handleClose(key, keyPath) {
+            console.log(key, keyPath);
         }
     },
     /*components: {
