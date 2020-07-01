@@ -14,6 +14,7 @@ const PurgecssPlugin = require('purgecss-webpack-plugin')
 const instance = middleware(compiler);*/
 const doMode = process.env.NODE_ENV !== 'production' ? 'development' : 'production';
 const doDev = process.env.NODE_ENV !== 'production';
+
 if (module.hot) {
     module.hot.accept()
 }
@@ -329,7 +330,7 @@ var clientConfig = {
          * @param cleanOnceBeforeBuildPatterns {array} 排除文件
          */
         new CleanWebpackPlugin({
-            dry: false,
+            dry: doDev,
             verbose: true,
             cleanOnceBeforeBuildPatterns: ['**/*', '!noimgs', '!noimgs/**/*']
         }),
